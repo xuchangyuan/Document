@@ -11,7 +11,7 @@
 
     vim /etc/pptpd.conf
     localip 10.0.8.11  #本机内网ip地址。（如果服务器有公网ip就写公网ip）
-    remoteip 10.0.8.10-50  #分配给客户端的网段
+    remoteip 10.0.8.20-50  #分配给客户端的网段
 
 ### 2.2配置option参数
 
