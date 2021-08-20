@@ -38,7 +38,6 @@
 
     iptables -t nat -A POSTROUTING -s 10.0.8.0/24 -o eth0 -j MASQUERADE
     iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-    iptables --table nat --apend POSTROUTING --out-interface ppp0 -j MASQUERADE
     iptables --table nat --append POSTROUTING --out-interface ppp0 -j MASQUERADE
     iptables -I INPUT -s 10.0.8.0/8 -i ppp0 -j ACCEPT
     iptables-save > firewall
