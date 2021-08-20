@@ -36,6 +36,9 @@
 
 ## 5.配置防火墙规则
 
+--eth0 物理网卡
+--ppp0 pptp映射网卡
+
     iptables -t nat -A POSTROUTING -s 10.0.8.0/24 -o eth0 -j MASQUERADE
     iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
     iptables --table nat --append POSTROUTING --out-interface ppp0 -j MASQUERADE
